@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='img/ICON.ico')}}">
+    <title></title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}} " />
+
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/slick.css')}} " />
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/slick-theme.css')}} " />
+
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/nouislider.min.css')}} " />
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/font-awesome.min.css')}} ">
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/style.css')}} " />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- TOP HEADER -->
+        <div id="top-header">
+            <div class="container">
+                <ul class="header-links pull-left">
+                    <li><a href="#"><i class="fa fa-phone"></i> +233 249264588</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> qwekubenjamin17@gmail.com</a></li>
+                    <li><a href="#"><i class="fa fa-map-marker"></i> Koforidua Technical University</a></li>
+                </ul>
+                <ul class="header-links pull-right">
+                    <li><a href="#" download><i class="fa fa-dollar"></i>Download source code here </a></li>
+                    <li><a href="https://github.com/benjaminkweku/website"><i class="fa fa-user-o"></i> Go to our github page</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /TOP HEADER -->
+
+        <!-- MAIN HEADER -->
+        <div id="header">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <!-- LOGO -->
+                    <div class="col-md-3">
+                        <div class="header-logo">
+                            <a href="#" class="logo">
+                                <img src="{{url_for('static', filename='./img/1LOGO.png')}} " alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /LOGO -->
+
+                    <!-- SEARCH BAR -->
+                    <div class="col-md-6">
+                        <a class="header-search">
+                            <form action="/on" , method="POST">
+
+                                <input class="input" id="input_on" name="box1" placeholder="type here">
+                                <button class="search-btn" id="search" onclick="(http://169.254.203.24:5000/on)" name="click1">ON</button>
+
+                            </form>
+                    </div>
+                </div>
+                <!-- /SEARCH BAR -->
+                <main class="display">
+                    <section class="background" style="width:100%">
+                        <p class="result">{{results}}</p>
+                    </section>
+                    <section class="pic"><img src="{{url_for('static',filename='img/big.png')}}" style="width:100%" alt="" class="big"></section>
+
+                </main>
+
+
+
+
+                <footer class="foot">
+                    <div class="copyright">
+                        <P>Copyright reserved &copy 2019,</P>
+                    </div>
+                </footer>
+
+                <script type="text/javascript">
+                    function light_on() {
+                        text = document.getElementById('input').value = "light on";
+                        currentvalue = document.getElementById('light_on').value;
+                        if (currentvalue == text) {
+                            document.getElementById("light_on").value = "on";
+                        } else {
+                            document.getElementById("light_on").value = "Off";
+                        }
+                    }
+                </script>
+
+
+                <!-- /FOOTER -->
+
+                <!-- jQuery Plugins -->
+                <script src="{{url_for('static', filename='js/jquery.min.js')}}  "></script>
+                <script src="{{url_for('static', filename='js/bootstrap.min.js ')}} "></script>
+                <script src="{{url_for('static', filename='js/slick.min.js')}}  "></script>
+                <script src="{{url_for('static', filename='js/nouislider.min.js ')}} "></script>
+                <script src="{{url_for('static', filename='js/jquery.zoom.min.js ')}} "></script>
+                <script src="{{url_for('static', filename='js/main.js')}} "></script>
+
+</body>
+
+</html>
